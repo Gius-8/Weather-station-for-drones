@@ -26,7 +26,7 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
@@ -55,11 +55,11 @@
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -165,6 +165,38 @@ GIUSEPPECACCAVALE.IT</text>
 <hole x="71.12" y="47.625" drill="2.8"/>
 <hole x="70.485" y="2.54" drill="2.8"/>
 <hole x="2.54" y="2.54" drill="2.8"/>
+<text x="67.945" y="35.56" size="1.016" layer="21">GND</text>
+<text x="67.945" y="27.94" size="1.016" layer="21">VCC</text>
+<text x="67.945" y="33.02" size="1.016" layer="21">TX</text>
+<text x="67.945" y="30.48" size="1.016" layer="21">RX</text>
+<text x="32.385" y="45.085" size="1.016" layer="21" rot="R90">GND</text>
+<text x="34.925" y="45.085" size="1.016" layer="21" rot="R90">VCC</text>
+<text x="37.465" y="45.085" size="1.016" layer="21" rot="R90">MISO</text>
+<text x="40.005" y="45.085" size="1.016" layer="21" rot="R90">MOSI</text>
+<text x="42.545" y="45.085" size="1.016" layer="21" rot="R90">SCK</text>
+<text x="45.085" y="45.085" size="1.016" layer="21" rot="R90">CS</text>
+<text x="19.05" y="41.91" size="1.016" layer="21" rot="R90">VCC</text>
+<text x="21.59" y="41.91" size="1.016" layer="21" rot="R90">GND</text>
+<text x="24.13" y="41.91" size="1.016" layer="21" rot="R90">SCL</text>
+<text x="26.67" y="41.91" size="1.016" layer="21" rot="R90">SDA</text>
+<text x="9.525" y="39.37" size="1.016" layer="21">GND</text>
+<text x="9.525" y="41.91" size="1.016" layer="21">+5V</text>
+<text x="48.895" y="6.35" size="1.016" layer="21" rot="R270">DAT</text>
+<text x="47.625" y="12.065" size="1.016" layer="21" rot="R180">GND</text>
+<text x="43.815" y="12.065" size="1.016" layer="21" rot="R180">VCC</text>
+<text x="20.32" y="6.35" size="1.016" layer="21" rot="R270">A0</text>
+<text x="22.86" y="6.35" size="1.016" layer="21" rot="R270">A1</text>
+<text x="25.4" y="6.35" size="1.016" layer="21" rot="R270">A2</text>
+<text x="27.94" y="6.35" size="1.016" layer="21" rot="R270">A3</text>
+<text x="30.48" y="6.35" size="1.016" layer="21" rot="R270">A4</text>
+<text x="33.02" y="6.35" size="1.016" layer="21" rot="R270">A5</text>
+<text x="35.56" y="6.35" size="1.016" layer="21" rot="R270">A6</text>
+<text x="40.64" y="8.255" size="1.016" layer="21" rot="R270">D0</text>
+<text x="67.945" y="13.97" size="1.016" layer="21">GREEN</text>
+<text x="68.58" y="25.4" size="1.016" layer="21">RED</text>
+<text x="62.23" y="34.925" size="1.016" layer="21" rot="R90">YELLOW</text>
+<dimension x1="0" y1="50.1525" x2="73.66" y2="50.165" x3="36.8291375" y3="55.238534375" textsize="1.016" layer="48"/>
+<dimension x1="0" y1="50.1525" x2="0" y2="0" x3="-7.62" y3="25.07625" textsize="1.016" layer="48"/>
 </plain>
 <libraries>
 <library name="GClib">
