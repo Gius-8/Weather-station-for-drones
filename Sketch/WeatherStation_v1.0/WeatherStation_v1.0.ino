@@ -133,7 +133,7 @@ void loop() {
             Serial.println("STOP WRITING");
           }
           else {
-            Serial.println("Press the pullsante to start writing.");
+            Serial.println("Press the button to start writing.");
           }
           break;
       }
