@@ -15,4 +15,4 @@ You will be able to acquire:
 - Altitude drone
 - Geographic coordinates
 
-Link tutorial: https://www.hackster.io/gius_8/weather-station-for-drones-1184cd?ref=user&ref_id=52841&offset=0
+Link tutorial: https://www.hackster.io/gius_8/weather-station-for-drones-1184cd
