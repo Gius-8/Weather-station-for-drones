@@ -72,6 +72,7 @@ float t, h;
 double lat, lng, speed, ALTITUDE;
 int year;
 byte month, day, hour, minute, second;
+String DateString = "";
 int i = 0;
 boolean changeLocation = false;
 boolean GPSstatus = false;
@@ -80,6 +81,7 @@ void setup() {
 
   file.reserve(10); //Reserve 10 byte for file
   Combine.reserve(20); //Reserve 20 byte for Combine
+  DateString.reserve(30); //Reserve 60 byte for DateString
 
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   pinMode(SWITCH_WIFI, INPUT_PULLUP);
@@ -128,7 +130,7 @@ void loop() {
 
             close_myFile();
             reset_Variables();
-
+            digitalWrite(ledStart, LOW); // led Status
             Serial.println("CLOSE SD.");
             Serial.println("STOP WRITING");
           }
@@ -143,7 +145,7 @@ void loop() {
     }
     delay(5000);
   }
-  else if (StateSwitch == HIGH && GPSstatus) {
+  else if (StateSwitch == HIGH) {
     getBMP180data();
     getDHTdata();
 
@@ -152,7 +154,7 @@ void loop() {
     if (CreateFile && WriteEncoding && WriteFolder) {
       close_myFile();
       reset_Variables();
-      digitalWrite(ledStart, LOW);
+      digitalWrite(ledStart, LOW); // led Status
       Serial.println("CLOSE SD.");
       Serial.println("STOP WRITING");
     }
@@ -164,10 +166,10 @@ void loop() {
 void loop1() {
   if(StateSwitch == LOW) ButtPush = debounce(BUTTON_PIN);
 
-  if (ButtPush == HIGH && GPSstatus && StateSwitch == LOW)
+ /* if (ButtPush == HIGH && GPSstatus && StateSwitch == LOW)
     digitalWrite(ledStart, LOW);
   else if (ButtPush == LOW && GPSstatus && StateSwitch == LOW)
-    digitalWrite(ledStart, HIGH);
+    digitalWrite(ledStart, HIGH);*/
 
   while (Serial1.available() > 0)
     if (gps.encode(Serial1.read()))

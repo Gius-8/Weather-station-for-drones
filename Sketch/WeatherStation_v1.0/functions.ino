@@ -28,3 +28,50 @@ void reset_Variables() {
   i = 0;
 }
 
+String dateString(){
+  DateString = "";
+  
+  if (day < 10) {
+    DateString = "0";
+    DateString += day;
+  }
+  else
+    DateString = day;
+    
+  DateString += "-";
+  if (month < 10) {
+    DateString += "0";
+    DateString += month;
+  }
+  else
+    DateString += month;
+    
+  DateString += "-";
+  DateString += year;
+    
+  DateString += " ";
+  if (hour < 10) {
+    DateString += "0";
+    DateString += hour;
+  }
+  else
+    DateString += hour;
+
+  DateString += ":";
+  if (minute < 10) {
+    DateString += "0";
+    DateString += minute;
+  }
+  else
+    DateString += minute;
+  DateString += ":";
+  if (second < 10) {
+   DateString += "0";
+    DateString += second;
+  }
+  else
+    DateString += second;
+
+  return DateString;
+}
+

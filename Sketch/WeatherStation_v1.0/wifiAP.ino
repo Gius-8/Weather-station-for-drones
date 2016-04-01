@@ -71,6 +71,9 @@ void wifiLoop() {
           client.print("Latitude: <b>");
           client.print(lat, 6);
           client.println("</b><br>");
+          client.print("Date: <b>");
+          client.print(dateString());
+          client.println("</b><br>");
           client.println("<h5 style=\"background-color:lightgrey\">Powered by Giuseppe Caccavale<br>Site: www.giuseppecaccavale.it<br>Email: info@giuseppecaccavale.it</h5>");
           client.println("</center></html>");
           break;

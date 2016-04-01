@@ -17,12 +17,14 @@ void writeKmlFile() {
       }
 
       if (WriteEncoding && WriteFolder) {
+        digitalWrite(ledStart, HIGH); // led Status
         if (changeLocation) {
           Placemark_Point(lng, lat, ALTITUDE, t, h, P, p0, speed);
-          Serial.print("Write in pos: ");
+          Serial.print("Write Point ");
           Serial.println(i);
           i++;
           changeLocation = false;
+          digitalWrite(ledStart, LOW); // led Status
         }
       }
     }
@@ -50,7 +52,7 @@ void CreatingFileKML() {
   }
   delay(500);
   myFile = SD.open(Combine, FILE_WRITE);
-  Serial.print("Creato il file: ");
+  Serial.print("Created the file: ");
   Serial.println(Combine);
   CreateFile = true;
 }
@@ -64,7 +66,7 @@ void Encoding() {
 }
 
 void style() {
-  myFile.println("<name>Luoghi temporanei.kml</name>");
+  myFile.println("<name>Weather Station for drones.kml</name>");
   myFile.println("<StyleMap id=\"m_ylw-pushpin\">");
   myFile.println("<Pair>");
   myFile.println("<key>normal</key>");
@@ -94,7 +96,7 @@ void style() {
 
 void folder() {
   myFile.println("<Folder>");
-  myFile.println("<name>Misurazioni</name>");
+  myFile.println("<name>Measurement Points</name>");
   myFile.println("<open>1</open>");
 
   myFile.flush();
@@ -122,6 +124,8 @@ void Placemark_Point(double longitude, double latitude, double Altit, float temp
   myFile.print("\nSpeed: ");
   myFile.print(speedGPS);
   myFile.print(" m/s");
+  myFile.print("\nDate: ");
+  myFile.print(dateString());  
   myFile.println("</description>");
   myFile.println("<LookAt>");
   myFile.print("<gx:TimeStamp><when>");
